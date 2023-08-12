@@ -1,19 +1,26 @@
 const square = document.getElementById("square");
 const container = document.getElementById("container");
+const reset = document.getElementById("reset");
 
 
-for(let i = 0; i < 16; i++){
-    let newOne = document.createElement("tr");
-    newOne.id = "row" + i;
-    newOne.classList.add("box")
-    square.appendChild(newOne)
+for(let i = 0; i < 64; i++){
+    for(let j = 0; j < 64; j++){
+        let newOne = document.createElement("div");
+        newOne.classList.add("box");
 
-    let roww = document.getElementById("row" + i)
-    for(let x = 0; x < 16; x++){
-        let myCell = document.createElement("td");
-        myCell.classList.add("box")
-        roww.appendChild(myCell);
+        newOne.addEventListener("mouseover", function() {
+            this.classList.add("active")
+        })
+        
+        reset.addEventListener("click", function() {
+            newOne.classList.remove("active")
+        })
+
+        container.appendChild(newOne)
+
+        
     }
+    
     
 }
 
