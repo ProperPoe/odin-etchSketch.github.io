@@ -40,15 +40,17 @@ function createGrid (width, height){
 createGrid(initialWidth, initalHeight)
 
 newBtn.addEventListener("click", () => {
-    input.innerHTML = `<div>
-        <input class="height" id="height" type="text">
-        <input class="width" id="width" type="text">
+    input.innerHTML = `
+        <input class="height" id="height" type="text" placeholder="Enter height..">
+        <input class="width" id="width" type="text" placeholder="Enter width..">
         <button id="createBtn">Create</button>
-        </div>`
+        <button id="closePop">Close</button>
+        `
     
     const createBtn = document.getElementById("createBtn");
     const gridHeight = document.getElementById("height")
     const gridWidth = document.getElementById("width")
+    const closePopUp = document.getElementById("closePop")
     createBtn.addEventListener("click", () => {
         let width = gridWidth.value;
         let height = gridHeight.value;
@@ -56,6 +58,9 @@ newBtn.addEventListener("click", () => {
         if(!isNaN(width) && !isNaN(height) && width > 0 && height > 0){
             createGrid(width, height);
         }
+    })
+
+    closePopUp.addEventListener("click", ()=> {
         input.innerHTML = "";
     })
 })

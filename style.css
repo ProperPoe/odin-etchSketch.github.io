@@ -1,7 +1,85 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body{
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.popUp{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.new {
+    border: none;
+    background-color: lightsalmon;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    height: 75px;
+    width: 120px;
+}
+
+.new:hover{
+    background-color: rgb(251, 187, 162);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.input input {
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    width: 200px;
+}
+
+.input input::placeholder{
+    color: white;
+}
+
+.input button {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.input #createBtn:hover{
+    background-color: rgb(115, 218, 115);
+    color: white;
+}
+.input #closePop:hover{
+    background-color: red;
+    color: white;
+}
+
 
 .container-contain {
     min-width: 700px;
@@ -17,10 +95,27 @@
 }   
 
 .box{
+    background-color: white;
     border: 1px solid;
 
 }
 
 .box.active{
     background-color: black;
+}
+
+.reset {
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    height: 75px;
+    width: 120px;
+}
+
+.reset:hover {
+    background-color: rgb(250, 144, 144);
 }
