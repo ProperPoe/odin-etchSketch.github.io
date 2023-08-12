@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+
+}
+
+.square {
+    border: 1px solids;
+}
+
+.square tr td:hover{
+    background-color: black;
+}
+.box {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 20px;
+}
+
+/*.box:hover {
+    background-color: aqua;
+}*/
